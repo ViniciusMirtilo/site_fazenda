@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazenda Bela Colheita - O Melhor do Mirtilo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo Fazenda Bela Colheita">
+                <span>Fazenda Bela Colheita</span>
+            </div>
+            <ul>
+                <li><a href="#descricao">Descrição</a></li>
+                <li><a href="#destaque">Destaque</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="slider">
+                <img src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e" alt="Mirtilos frescos">
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="descricao" class="description">
+            <h1>Fazenda Bela Colheita - O Melhor do Mirtilo, Direto da Natureza!</h1>
+            <p>Localizada em meio à natureza, a Fazenda Bela Colheita é especializada no cultivo sustentável de mirtilos, oferecendo frutas frescas, saudáveis e ricas em sabor. Com técnicas cuidadosas de plantio e colheita, garantimos a melhor qualidade para levar até você o verdadeiro gosto do mirtilo.</p>
+        </section>
+
+        <section id="destaque" class="features">
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e" alt="Colheita Fresca">
+                <h3>Colheita Fresca</h3>
+                <p>Mirtilos maduros prontos para a colheita, direto dos arbustos saudáveis da fazenda. 🌱</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e" alt="Qualidade Natural">
+                <h3>Qualidade Natural</h3>
+                <p>Frutas selecionadas com cuidado, garantindo sabor doce e puro em cada mordida. 💙</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e" alt="Do Campo à Mesa">
+                <h3>Do Campo à Mesa</h3>
+                <p>A jornada do mirtilo, cultivado com carinho, para enriquecer sua alimentação com saúde e frescor. 🌱</p>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <h2>Entre Em Contato</h2>
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" required>
+                            <option value="SP">SP</option>
+                            <option value="RJ">RJ</option>
+                            <option value="MG">MG</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <select id="cidade" name="cidade" required>
+                            <option value="Campinas">Campinas</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Ribeirão Preto">Ribeirão Preto</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <img src="https://api.iconify.design/mdi:fruit-blueberry.svg" alt="Logo Fazenda Bela Colheita">
+            <span>Fazenda Bela Colheita</span>
+        </div>
+        <p>© 2024-2025 FBC Inc. All rights reserved</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
