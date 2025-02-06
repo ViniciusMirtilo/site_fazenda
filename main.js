@@ -1,10 +1,9 @@
 // Slider functionality
 const images = [
-    'https://images.unsplash.com/photo-1498557850523-fd3d118b962e',
-    'https://images.unsplash.com/photo-1594002348772-bc0f9cc6204d',
-    'https://images.unsplash.com/photo-1615484477778-ca3b77940c25',
-    'https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e',
-    'https://images.unsplash.com/photo-1597474561103-0857a59b62e3'
+    '../img/slide01.jpg',
+    '../img/slide02.jpg',
+    '../img/slide03.jpg',
+    '../img/slide04.jpg'
 ];
 
 let currentSlide = 0;
