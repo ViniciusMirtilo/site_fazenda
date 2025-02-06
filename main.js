@@ -29,20 +29,16 @@ dots.forEach((dot, index) => {
         currentSlide = index;
         updateSlider();
 
-          // Se o ponto já estiver ativo, ignore o clique
           if (dot.classList.contains('active')) {
             return;
         }
 
-        // Ativa o ponto e bloqueia a alteração por 10 segundos
         dot.classList.add('active');
 
-        // Bloqueia a interação com o ponto por 10 segundos
-        dot.style.pointerEvents = 'none';  // Desativa a interação com o ponto
+        dot.style.pointerEvents = 'none';  
 
         setTimeout(() => {
-            // Após 10 segundos, desbloqueia o ponto
-            dot.style.pointerEvents = 'auto';  // Habilita novamente a interação
+            dot.style.pointerEvents = 'auto';
         }, 10000);  // 10 segundos
     });
 });
@@ -53,19 +49,15 @@ const form = document.getElementById('contactForm');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // Get form data
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
     
-    // Here you would typically send the data to a server
     console.log('Form submitted:', data);
     
-    // Show success message
     alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
     form.reset();
 });
 
-// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
