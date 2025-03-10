@@ -1,6 +1,6 @@
 // Slider functionality
 const images = [
-    './img/slide01.jpg',
+    '../img/slide01.jpg',
     '../img/slide02.jpg',
     '../img/slide03.jpg',
     '../img/slide04.jpg'
