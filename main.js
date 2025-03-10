@@ -6,29 +6,35 @@ const images = [
 ];
 
 let currentSlide = 0;
-const sliderImage = document.getElementById('sliderImage'); // Pegando a única imagem
+const sliderImage = document.getElementById('sliderImage');
 const dots = document.querySelectorAll('.dot');
 
+// Atualiza a imagem e os dots
 function updateSlider() {
     sliderImage.src = images[currentSlide]; // Apenas troca o src
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlide);
-    });
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlide].classList.add('active');
 }
 
-// Mudar o slide automaticamente a cada 5 segundos
-setInterval(() => {
+// Troca o slide automaticamente a cada 5s
+let slideInterval = setInterval(() => {
     currentSlide = (currentSlide + 1) % images.length;
     updateSlider();
 }, 5000);
 
 // Evento de clique nos dots
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentSlide = index;
+dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+        clearInterval(slideInterval); // Para o autoplay ao clicar
+        currentSlide = parseInt(e.target.dataset.index);
         updateSlider();
+        slideInterval = setInterval(() => { // Reinicia o autoplay
+            currentSlide = (currentSlide + 1) % images.length;
+            updateSlider();
+        }, 5000);
     });
 });
+
 
 
 // Form handling
