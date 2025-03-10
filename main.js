@@ -1,6 +1,6 @@
 // Slider functionality
 const images = [
-    'https://www.dropbox.com/scl/fi/pf0fcnxla0z4ep9cas0oj/slide01.jpg?rlkey=xus6p6dn2km5tehucsz5jrpqq&st=3c4i4i75&dl=0',
+    '../img/slide01.jpg',
     '../img/slide02.jpg',
     '../img/slide03.jpg',
     '../img/slide04.jpg'
