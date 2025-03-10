@@ -1,4 +1,3 @@
-// Slider functionality
 const images = [
     '../img/slide01.jpg',
     '../img/slide02.jpg',
@@ -7,41 +6,30 @@ const images = [
 ];
 
 let currentSlide = 0;
-const sliderImage = document.querySelector('.slider img');
+const sliderImage = document.getElementById('sliderImage'); // Pegando a única imagem
 const dots = document.querySelectorAll('.dot');
 
 function updateSlider() {
-    sliderImage.src = images[currentSlide];
+    sliderImage.src = images[currentSlide]; // Apenas troca o src
     dots.forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
     });
 }
 
-// Change slide every 5 seconds
+// Mudar o slide automaticamente a cada 5 segundos
 setInterval(() => {
     currentSlide = (currentSlide + 1) % images.length;
     updateSlider();
 }, 5000);
 
-// Add click events to dots
+// Evento de clique nos dots
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         currentSlide = index;
         updateSlider();
-
-          if (dot.classList.contains('active')) {
-            return;
-        }
-
-        dot.classList.add('active');
-
-        dot.style.pointerEvents = 'none';  
-
-        setTimeout(() => {
-            dot.style.pointerEvents = 'auto';
-        }, 10000);  // 10 segundos
     });
 });
+
 
 // Form handling
 const form = document.getElementById('contactForm');
